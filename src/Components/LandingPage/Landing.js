@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import styled from 'styled-components';
-import logo from './preeminentlogo.PNG'
+// import logo from './preeminentlogo.png'
 import { FallingLines } from  'react-loader-spinner'
 // import { SpinnerCircular } from 'spinners-react';
 import LandingPage from './Land1/LandingPage'
@@ -34,7 +34,7 @@ const Landing = () => {
     <div>
       {
         loading? <Div>
-          <Logo src={logo} alt="logo"/>  
+          {/* <Logo src={logo} alt="logo"/>   */}
           <FallingLines
       color="#fff"
     width="100"
