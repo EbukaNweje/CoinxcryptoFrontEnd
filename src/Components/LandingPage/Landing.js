@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import styled from 'styled-components';
-import logo from './preeminentlogo.png'
+import logo from './preeminentlogo.PNG'
 import { FallingLines } from  'react-loader-spinner'
 // import { SpinnerCircular } from 'spinners-react';
 import LandingPage from './Land1/LandingPage'
@@ -82,8 +82,8 @@ align-items: center;
 `;
 
 export const Logo = styled.img`
-width: 20%;
-height: 10%;
+width: 10%;
+height: 15%;
 margin-top: 20px;
 
 @media Screen and (max-width: 768px){

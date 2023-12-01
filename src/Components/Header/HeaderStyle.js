@@ -174,7 +174,7 @@ align-items: center;
 }
 `;
 export const Logo = styled.img`
-width: 70%;
+width: 50%;
 height: 30%;
 margin-top: 20px;
 
