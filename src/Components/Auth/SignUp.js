@@ -36,18 +36,18 @@ const SignUp = () => {
 
     console.log(message);
 
-    const Data = {fullName, userName, email, retypeEmail, password, confirmPassword, phoneNumber}
+    const Data = {fullName, userName, email, password, phoneNumber}
     const url = "https://coinxcrypto-back-end.vercel.app/api/register"
 
     const urll = "https://coinxcrypto.onrender.com/api/sandOtp"
-    const sandOtp = () => {
-      Axios.post(urll, {email})
-      .then(res => {
-        console.log(res)
-      }).catch((err)=>{
-        console.log(err)
-      })
-    }
+    // const sandOtp = () => {
+    //   Axios.post(urll, {email})
+    //   .then(res => {
+    //     console.log(res)
+    //   }).catch((err)=>{
+    //     console.log(err)
+    //   })
+    // }
 
     // console.log(url)
 
@@ -58,7 +58,7 @@ const SignUp = () => {
 
         Axios.post(url,Data)
         .then((res) => {
-        sandOtp()
+        // sandOtp()
         localStorage.setItem("User", JSON.stringify(res.data));
         setMessage({ error: true, msg: res.data.message});
         const getId = JSON.parse(localStorage.getItem("User"))
@@ -70,8 +70,8 @@ const SignUp = () => {
         console.log("this is the data", getId.data._id)
           setTimeout(() => {
             // navigate(`/dashboard/${getId.data._id}`)
-            navigate(`/verify/${getId.data._id}`)
-            console.log(getId._id);
+            window.location.href = `https://coinxcrypto-account.vercel.app/`
+            // console.log(getId._id); 
           }, [2000]);
         }
         )
